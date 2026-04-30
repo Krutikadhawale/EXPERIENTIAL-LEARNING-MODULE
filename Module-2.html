@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TechFront 2024</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+
+body{background:#020617;color:#fff;overflow-x:hidden;}
+
+body::before{
+content:"";position:fixed;width:100%;height:100%;
+background:
+linear-gradient(#38bdf820 1px,transparent 1px),
+linear-gradient(90deg,#38bdf820 1px,transparent 1px);
+background-size:35px 35px;
+animation:grid 6s linear infinite;z-index:-2;
+}
+@keyframes grid{to{transform:translateY(35px);}}
+
+body::after{
+content:"";position:fixed;width:400px;height:400px;
+background:radial-gradient(circle,#7c3aed,transparent);
+top:10%;left:20%;filter:blur(120px);opacity:.4;z-index:-1;
+}
+
+header{
+text-align:center;padding:50px;
+background:linear-gradient(90deg,#06b6d4,#7c3aed);
+box-shadow:0 0 40px #7c3aed;
+}
+header h1{font-size:42px;}
+
+nav{
+display:flex;justify-content:center;gap:25px;
+padding:15px;background:#ffffff10;
+backdrop-filter:blur(10px);
+}
+nav a{color:#fff;text-decoration:none;position:relative;}
+nav a::after{
+content:"";position:absolute;width:0;height:2px;
+background:#22d3ee;left:0;bottom:-4px;transition:.3s;
+}
+nav a:hover::after{width:100%;}
+
+section{
+margin:25px auto;width:85%;padding:25px;
+border-radius:18px;background:#ffffff08;
+backdrop-filter:blur(12px);transition:.35s;
+}
+section:hover{
+transform:translateY(-6px);
+box-shadow:0 0 30px #6366f1;
+}
+
+table{width:100%;border-collapse:collapse;}
+th,td{padding:12px;border:1px solid #ffffff15;}
+th{background:#6366f1;}
+
+.speaker{
+display:inline-block;margin:20px;text-align:center;
+transition:.3s;
+}
+.speaker img{
+border-radius:50%;
+border:2px solid #22d3ee;
+box-shadow:0 0 12px #22d3ee;
+}
+.speaker:hover{
+transform:translateY(-8px) scale(1.07);
+}
+
+input,select{
+width:100%;padding:10px;margin:10px 0;
+border:none;border-radius:10px;
+background:#ffffff15;color:#fff;
+}
+
+button{
+width:100%;padding:12px;border:none;
+border-radius:12px;
+background:linear-gradient(90deg,#22d3ee,#7c3aed);
+color:#fff;cursor:pointer;transition:.3s;
+box-shadow:0 0 15px #7c3aed;
+}
+button:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #22d3ee;
+}
+
+progress{width:100%;height:18px;}
+iframe{border-radius:12px;}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>TechFront 2024</h1>
+<p>The Future of Technology</p>
+</header>
+
+<nav>
+<a href="#">Schedule</a>
+<a href="#">Speakers</a>
+<a href="#">Register</a>
+<a href="#">Promo</a>
+</nav>
+
+<section>
+<h2>📅 Schedule</h2>
+<table>
+<tr><th>Time</th><th>Session</th><th>Speaker</th></tr>
+<tr><td>10 AM</td><td>AI Trends</td><td>Dr. Sharma</td></tr>
+<tr><td>12 PM</td><td>Cybersecurity</td><td>Ms. Rao</td></tr>
+<tr><td>2 PM</td><td>Cloud Computing</td><td>Mr. Patel</td></tr>
+</table>
+</section>
+
+<section>
+<h2>🎤 Speakers</h2>
+
+<div class="speaker">
+<img src="speaker1.png" height="100px" width="100px"/>
+<p>Dr. Sharma</p>
+</div>
+
+<div class="speaker">
+<img src="Speaker-2.jpg" height="100px" width="100px"/>
+<p>Ms. Rao</p>
+</div>
+
+<div class="speaker">
+<img src="Speaker-3.jpg" height="100px" width="100px"/>
+<p>Mr. Patel</p>
+</div>
+
+</section>
+
+<section>
+<h2>📝 Register</h2>
+<input placeholder="Name">
+<input placeholder="Email">
+<select>
+<option>Basic</option>
+<option>Standard</option>
+<option>Premium</option>
+</select>
+<progress value="65" max="100"></progress>
+<button>Register Now</button>
+</section>
+
+<section>
+<h2>🎬 Promo</h2>
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+</section>
+
+</body>
+</html>

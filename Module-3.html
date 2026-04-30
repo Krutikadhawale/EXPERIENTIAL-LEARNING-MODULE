@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechFront 2024</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1d4ed8,#06b6d4);
+    color:white;
+}
+
+#loginPage{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#020617,#1d4ed8,#06b6d4);
+}
+
+.login-box{
+    width:350px;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(20px);
+    box-shadow:0 0 25px rgba(0,255,255,0.4);
+}
+
+.login-box h2{margin-bottom:20px;}
+
+.login-box input{
+    width:100%;
+    padding:14px;
+    margin:12px 0;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.login-box button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:cyan;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.login-box button:hover{background:white;}
+
+#error{
+    margin-top:10px;
+    color:#ff4d4d;
+    font-weight:bold;
+}
+
+header{
+    text-align:center;
+    padding:45px 20px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+}
+
+header h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:20px;
+    color:#e0e7ff;
+}
+
+nav{
+    text-align:center;
+    padding:18px;
+    background:rgba(0,0,0,0.15);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 18px;
+    font-size:18px;
+}
+
+nav a:hover{color:#00ffff;}
+
+section{
+    width:90%;
+    margin:30px auto;
+    padding:30px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(18px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:32px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    text-align:center;
+}
+
+th,td{
+    padding:16px;
+    border:1px solid rgba(255,255,255,0.25);
+}
+
+th{background:rgba(0,255,255,0.3);}
+
+.speaker-box{
+    display:flex;
+    gap:25px;
+}
+
+.speaker{
+    flex:1;
+    text-align:center;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.12);
+    transition:.4s;
+}
+
+.speaker:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px cyan;
+}
+
+.speaker img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:4px solid white;
+    margin-bottom:15px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#00ffff;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{background:white;}
+
+progress,meter{
+    width:100%;
+    height:28px;
+    margin:12px 0;
+}
+
+details{
+    background:rgba(255,255,255,0.12);
+    padding:15px;
+    margin:12px 0;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<body>
+
+<div id="loginPage">
+    <div class="login-box">
+        <h2>TechFront Login</h2>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+        <p id="error"></p>
+    </div>
+</div>
+
+<div id="mainWebsite" style="display:none;">
+
+<header>
+    <h1>TechFront 2024</h1>
+    <p>The Future of Technology Conference</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Schedule</a>
+    <a href="#">Speakers</a>
+    <a href="#">Register</a>
+    <a href="#">FAQ</a>
+</nav>
+
+<section>
+    <h2>Conference Schedule</h2>
+    <table>
+        <tr><th>Time</th><th>Event</th></tr>
+        <tr><td>10:00 AM</td><td>Opening Ceremony</td></tr>
+        <tr><td>11:30 AM</td><td>AI & Robotics Session</td></tr>
+        <tr><td>2:00 PM</td><td>Cyber Security Talk</td></tr>
+        <tr><td>4:00 PM</td><td>Web Innovation Panel</td></tr>
+    </table>
+</section>
+
+<section>
+    <h2>Featured Speakers</h2>
+    <div class="speaker-box">
+        <div class="speaker">
+            <img src="speaker1.jpg">
+            <h3>Rahul Sharma</h3>
+            <p>AI Expert</p>
+        </div>
+        <div class="speaker">
+            <img src="speaker2.jpg">
+            <h3>Priya Patel</h3>
+            <p>Cyber Security Specialist</p>
+        </div>
+        <div class="speaker">
+            <img src="speaker3.jpg">
+            <h3>Amit Joshi</h3>
+            <p>Web Technology Speaker</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Ticket Availability</h2>
+    VIP Ticket
+    <progress value="85" max="100"></progress>
+    Premium Ticket
+    <meter value="0.65"></meter>
+    Basic Ticket
+    <progress value="45" max="100"></progress>
+</section>
+
+<section>
+    <h2>Registration Form</h2>
+    <form>
+        <input type="text" placeholder="Enter Your Name" required>
+        <input type="email" placeholder="Enter Email" required>
+        <select required>
+            <option>Select Ticket Type</option>
+            <option>VIP</option>
+            <option>Premium</option>
+            <option>Basic</option>
+        </select>
+        <textarea rows="4" placeholder="Message"></textarea>
+        <button type="submit">Register Now</button>
+    </form>
+</section>
+
+<section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+        <summary>What is TechFront 2024?</summary>
+        <p>TechFront 2024 is a professional technology conference focused on innovation and future trends.</p>
+    </details>
+    <details>
+        <summary>Who can attend?</summary>
+        <p>Students, developers, professionals, and technology enthusiasts are welcome.</p>
+    </details>
+</section>
+
+<section>
+    <h2>Tech Quiz (Q & A)</h2>
+    <details>
+        <summary>1) What is TechFront 2024?</summary>
+        <p>TechFront 2024 is a technology conference focused on future innovations.</p>
+    </details>
+    <details>
+        <summary>2) What is the main goal of this conference?</summary>
+        <p>The goal is to share knowledge about new technology trends.</p>
+    </details>
+    <details>
+        <summary>3) Which technologies are discussed?</summary>
+        <p>AI, Robotics, Cyber Security, and Web Innovation.</p>
+    </details>
+    <details>
+        <summary>4) Who can attend TechFront?</summary>
+        <p>Students, developers, engineers, and technology lovers can attend.</p>
+    </details>
+</section>
+
+<footer>
+    <p>© 2024 TechFront Conference | All Rights Reserved</p>
+</footer>
+
+</div>
+
+<script>
+function login(){
+    let username=document.getElementById("username").value;
+    let pass=document.getElementById("password").value;
+
+    if(username!=="" && pass==="09112006"){
+        document.getElementById("loginPage").style.display="none";
+        document.getElementById("mainWebsite").style.display="block";
+    }else{
+        document.getElementById("error").innerHTML="Enter username and correct password!";
+    }
+}
+</script>
+
+</body>
+</html>
